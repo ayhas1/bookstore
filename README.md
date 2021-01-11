@@ -9,8 +9,8 @@ This project is still in development.
 - Account Reset Token
 - Email Sending Funtionality
 - Token Based User Authentication(JWT) - TODO
-- Product Search - TODO
-- Product Catalog - TODO
+- Book Search - TODO
+- Book Catalog - TODO
 - Payment Gateway - TODO
 - Shopping Cart - TODO
 - Admin Portal - TODO
