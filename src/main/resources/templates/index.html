@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head th:replace="common/header :: common-header"/>
+
+<body>
+
+<div th:replace="common/header :: navbar"/>
+<div class="container">
+    <div class="row">
+        <!--        Carousel for News-->
+        <div class="col-xs-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="carousel slide" data-ride="carousel" id="carousel-example-generic">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
+                            <li data-slide-to="1" data-target="#carousel-example-generic"></li>
+                            <li data-slide-to="2" data-target="#carousel-example-generic"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img alt="..." src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_1280.jpg">
+                                <div class="carousel-caption">
+                                    <h4>First Thumbnail Label</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum
+                                        has been the industry's standard dummy text ever since the 1500s, make a type
+                                        specimen
+                                        book.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="..." src="https://cdn.pixabay.com/photo/2016/09/08/22/43/books-1655783_1280.jpg">
+                                <div class="carousel-caption">
+                                    <h4>Second Thumbnail Label</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum
+                                        has been the industry's standard dummy text ever since the 1500s, make a type
+                                        specimen
+                                        book.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img alt="..." src="https://cdn.pixabay.com/photo/2020/09/18/21/12/person-5582976_1280.jpg">
+                                <div class="carousel-caption">
+                                    <h4>Third Thumbnail Label</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum
+                                        has been the industry's standard dummy text ever since the 1500s, make a type
+                                        specimen
+                                        book.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" data-slide="prev" href="#carousel-example-generic" role="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" data-slide="next" href="#carousel-example-generic" role="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <img class="img-responsive" src="/image/logo.png" style="display: inline-block; width: 700px;"/>
+        </div>
+    </div>
+    <hr/>
+    <!--FAQ AND HOURS&DIRECTIONS-->
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="panel-default">
+                <div class="panel-body">
+                    <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/06/08/15/11/typewriter-801921_1280.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="panel-default">
+                <div class="panel-body">
+                    <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/02/10/08/49/neon-1191281_1280.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="panel-default">
+                <div class="panel-body">
+                    <img class="img-responsive" src="https://cdn.pixabay.com/photo/2020/03/22/17/47/scrabble-4957948_1280.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FEATURED BOOKS-->
+    <div>
+        <div class="home-headline"><span>Featured Books</span></div>
+        <hr style="margin-top: -15px;"/>
+    </div>
+
+    <div class="row">
+        <div class="carousel slide" data-ride="carousel" id="featured-books">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li class="active" data-slide-to="0" data-target="#featured-books"></li>
+                <li data-slide-to="1" data-target="#featured-books"></li>
+                <li data-slide-to="2" data-target="#featured-books"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="img-responsive" src="/image/shelf.png" style="width: 100%;"/>
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="/image/shelf.png" style="width: 100%;"/>
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="img-responsive" src="/image/shelf.png" style="width: 100%;"/>
+                    <div class="carousel-caption">
+                        <div class="row">
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                            <div class="col-xs-2"><img alt="..." class="img-responsive" src="/image/book1.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" data-slide="prev" href="#featured-books" role="button">
+                <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" data-slide="next" href="#featured-books" role="button">
+                <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+</div><!--end of container-->
+
+<div th:replace="common/header :: body-bottom-scripts"/>
+</body>
+</html>
