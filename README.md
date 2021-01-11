@@ -19,7 +19,14 @@ This project is still in development.
 # Technologies:
 
 - Spring Boot
+- Spring Security
 - MySQL
 - Hibernate
 - Thymeleaf
 - Bootstrap
+
+# To Make it Work
+
+- Edit the Application.properties file by:
+  - Entering your own database connection setups(username, password...).
+  - Entering your own email and password to configure the SMTP gmail server.
