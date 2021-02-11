@@ -3,20 +3,20 @@ body {
 }
 .hr{
     border: none;
-    height: 1px;
+    height: 2px;
     color: #333;
     background-color: #333;
 }
 
 .container{
-    width: 90%;
+    width: auto;
 }
 .navbar {
     margin-bottom: 20px;
 }
 
 .box{
-    border: 1px solid #4169e1;
+    border: 1px solid red;
 }
 
 .home-headline{
@@ -38,7 +38,7 @@ body {
     color: #fff;
     margin: auto;
     text-align: center;
-    margin-top: 110px;
+    margin-top: 25px;
 }
 
 .section-headline span{

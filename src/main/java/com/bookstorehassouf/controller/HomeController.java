@@ -1,10 +1,12 @@
 package com.bookstorehassouf.controller;
 
 
+import com.bookstorehassouf.model.Book;
 import com.bookstorehassouf.model.User;
 import com.bookstorehassouf.security.PasswordResetToken;
 import com.bookstorehassouf.security.Role;
 import com.bookstorehassouf.security.UserRole;
+import com.bookstorehassouf.service.BookService;
 import com.bookstorehassouf.service.SendingMail;
 import com.bookstorehassouf.service.impl.FirstRandomPasswordImpl;
 import com.bookstorehassouf.service.impl.UserSecurityService;
@@ -19,10 +21,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Set;
-import java.util.UUID;
+import java.security.Principal;
+import java.util.*;
 
 
 @Controller
@@ -40,6 +40,9 @@ public class HomeController {
     @Autowired
     private UserServiceImpl userService;
 
+    @Autowired
+    private BookService bookService;
+
 
     @GetMapping("/")
     public String index() {
@@ -50,6 +53,36 @@ public class HomeController {
     public String login(Model model) {
         model.addAttribute("classActiveLogin", true);
         return "myAccount";
+    }
+
+    //Browse the books for the user
+    @RequestMapping("/bookshelf")
+    public String bookshelf(Model model, Principal principal){
+        if (principal != null) {
+            String username = principal.getName();
+            User user = userService.findByUsername(username);
+            model.addAttribute("user", user);
+        }
+        List<Book> bookList= bookService.findAll();
+        model.addAttribute("booklist", bookList);
+        return "bookshelf";
+    }
+
+    //show details of the book for the logged in user
+    @RequestMapping(value = "/bookDetail/{id}", method = RequestMethod.GET)
+    public String bookDetail(@PathVariable("id") Long id, Model model, Principal principal) {
+        if (principal != null) {
+            String username = principal.getName();
+            User user = userService.findByUsername(username);
+            model.addAttribute("user", user);
+        }
+        Book book = bookService.findOne(id);
+        model.addAttribute("book", book);
+        List<Integer> qtyList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        model.addAttribute("qtyList", qtyList);
+        model.addAttribute("qty", 1);
+
+        return "bookDetail";
     }
 
     //creates new user Account
