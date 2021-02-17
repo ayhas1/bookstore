@@ -13,7 +13,7 @@ This project is still in development.
 - Book Catalog
 - Payment Gateway - TODO
 - Shopping Cart - TODO
-- Admin Portal
+- Admin Portal- https://github.com/ayhas1/adminportal-bookstore
 - Order Management - TODO
 
 # Technologies:
