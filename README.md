@@ -9,11 +9,11 @@ This project is still in development.
 - Account Reset Token
 - Email Sending Funtionality
 - Token Based User Authentication(JWT) - TODO
-- Book Search - TODO
-- Book Catalog - TODO
+- Book Search
+- Book Catalog
 - Payment Gateway - TODO
 - Shopping Cart - TODO
-- Admin Portal - TODO
+- Admin Portal
 - Order Management - TODO
 
 # Technologies:
@@ -24,6 +24,7 @@ This project is still in development.
 - Hibernate
 - Thymeleaf
 - Bootstrap
+- Lombok
 
 # To Make it Work
 
