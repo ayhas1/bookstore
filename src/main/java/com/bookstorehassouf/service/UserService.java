@@ -1,6 +1,9 @@
 package com.bookstorehassouf.service;
 
 import com.bookstorehassouf.model.User;
+import com.bookstorehassouf.model.UserBilling;
+import com.bookstorehassouf.model.UserPayment;
+import com.bookstorehassouf.model.UserShipping;
 import com.bookstorehassouf.security.PasswordResetToken;
 import com.bookstorehassouf.security.UserRole;
 
@@ -18,7 +21,18 @@ public interface UserService {
 
     User findByEmail(String email);
 
+    User findById(Long id);
+
     User createUser(User user, Set<UserRole> userRoles);
 
     User save(User user);
+
+    void updateUserBilling(UserBilling userBilling, UserPayment userPayment, User user);
+
+    void updateUserShipping(UserShipping userShipping, User user);
+
+    void setUserDefaultPayment(Long userPaymentId, User user);
+
+    void setUserDefaultShipping(Long userShippingId, User user);
 }
+
