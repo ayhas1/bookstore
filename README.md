@@ -11,10 +11,10 @@ This project is still in development.
 - Token Based User Authentication(JWT) - TODO
 - Book Search
 - Book Catalog
-- Payment Gateway - TODO
-- Shopping Cart - TODO
+- Payment Gateway
+- Shopping Cart  
 - Admin Portal- https://github.com/ayhas1/adminportal-bookstore
-- Order Management - TODO
+- Order Management 
 
 # Technologies:
 
